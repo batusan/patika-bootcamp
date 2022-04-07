@@ -1,0 +1,203 @@
+/*** GENERAL ***/
+
+* {
+  /* Smooth texts */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  background-color: #222222;
+}
+
+/*** Header - Background  ***/
+
+#bg-section {
+  position: relative;
+  width: 100%;
+}
+
+#bg-section > img {
+  width: 100%;
+}
+
+#marvel-text {
+  position: absolute;
+  margin: 0 auto;
+  bottom: 10%;
+  left: 35%;
+  width: 30vw;
+  height: 15vw;
+  z-index: 2;
+}
+
+/*** Hero List Section ***/
+
+#hero-section {
+  width: 75vw;
+  color: white;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+#hero-list {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 3rem; /* flex gap  */
+  align-items: center;
+  flex: 1 1 auto;
+  flex-direction: row;
+  flex-wrap: wrap;
+  height: 100%;
+  width: 100%;
+  margin-top: 100px;
+}
+
+/*** Applying for single rectangle  ***/
+
+.hero-outline {
+  position: relative;
+  width: 70%;
+  height: 50vh;
+  border: 1px solid #ccc !important;
+}
+
+.img-inline > img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  top: -10%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.img-inline > hr {
+  position: absolute;
+  top: calc(-13% - 10px); /* Upper line calculate */
+  width: 100%;
+  height: 1px;
+  background-color: #ccc;
+  border: 0;
+}
+
+.hero-outline > .img-inline {
+  position: absolute;
+  width: 90%;
+  height: 90%;
+  left: 0;
+  top: -10%;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.hero-outline > span {
+  position: absolute;
+  /* text-center trick on absolute */
+  bottom: 3%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  width: 150px;
+
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 21px;
+  /* identical to box height */
+  text-align: center;
+
+  color: #ffffff;
+}
+
+/*** PAGINATION ***/
+
+.pagination {
+  display: inline-block;
+  position: absolute;
+  bottom: 1%;
+  right: 5%;
+  font-size: 1em;
+}
+
+.pagination a {
+  color: #7e7e7e;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+.pag-center {
+  color: black !important;
+  background-color: #7e7e7e;
+  border-radius: 100px;
+}
+
+/* LOW RESOULITON PHONES */
+
+@media screen and (max-width: 466px) {
+  .hero-outline {
+    margin: 0 0px 100px 0px;
+    height: 30vh;
+  }
+}
+
+/*  HIGH RESOULITON PHONES */
+
+@media screen and (max-width: 768px) {
+  .hero-outline {
+    margin: 0 0px 150px 0px;
+  }
+}
+
+/*  TABLET RESOULITON */
+
+@media screen and (min-width: 768px) {
+  #hero-section {
+    width: 90%;
+  }
+
+  .hero-outline {
+    width: 25%;
+    height: 30vh;
+    margin: 0 0 150px 0;
+  }
+  .pagination {
+    bottom: 3%;
+    right: 5%;
+  }
+}
+
+/*  LOW RESOULITON MONITORS - TVS */
+
+@media screen and (min-width: 1280px) {
+  #hero-section {
+    width: 80%;
+  }
+
+  .hero-outline {
+    width: 20%;
+    height: 31vh;
+  }
+
+  .hero-outline > .img-inline {
+    height: 100%;
+  }
+}
+
+/* HIGH RESOULITON MONITORS */
+
+@media screen and (min-width: 1440px) {
+  .hero-outline {
+    width: 20%;
+    height: 45vh;
+  }
+}
