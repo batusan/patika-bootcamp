@@ -1,6 +1,6 @@
 import axios, { URL } from "../Constants/axios";
 
-const API_KEY = "8fe60df9043ca82bac87ba80098f1c1a";
+const API_KEY = process.env.REACT_APP_MARVEL_API;
 
 export const getCharacters = async (currentPage, characterCount) => {
   try {
